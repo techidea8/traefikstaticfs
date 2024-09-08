@@ -1,0 +1,14 @@
+displayName: traefikstaticfs 
+type: middleware
+import: github.com/techidea8/traefikstaticfs
+summary: server static file or dir
+testData:
+  alias:
+    - mapper: /mnt:e:/data/storage
+      miss: next
+    - mapper: /:e:/data/www/site
+      miss: next
+  tryfile:
+    root: /var/www/site1
+    try:  $uri $uri/ /index.html
+    miss: next
