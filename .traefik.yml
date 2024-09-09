@@ -1,0 +1,7 @@
+displayName: staticfs server
+type: middleware
+import: github.com/techidea8/traefikstaticfs
+summary: web server for static file
+testData:
+    alias:
+      - /mnt:d:/data/storage/mnt
